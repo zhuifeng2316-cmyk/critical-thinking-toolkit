@@ -1,36 +1,221 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Critical Thinking Toolkit
 
-## Getting Started
+> AI时代最稀缺的能力是批判性思维
 
-First, run the development server:
+一个帮助你培养批判性思维的开源工具。不是给答案，而是帮你学会提问。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![Preview](public/preview.png)
+
+## ✨ 核心理念
+
+> **不是给答案，而是帮你学会提问**
+
+在信息爆炸的时代，我们每天都被各种观点轰炸：
+- 朋友圈转发的文章
+- 大V的言论
+- 算法的推送
+- 身边人的建议
+
+**批判性思维不是怀疑一切，而是学会独立判断。**
+
+这个工具帮你：
+1. 从多个角度看问题
+2. 发现潜在的逻辑漏洞
+3. 记录你的思维成长
+
+## 🚀 核心功能
+
+### 1. 多视角阅读器
+
+输入任何观点，系统从四个维度分析：
+
+- **支持角度**：为什么这个观点有道理？
+- **反对角度**：什么情况下这个观点不成立？
+- **盲点分析**：作者可能忽略了什么？
+- **利益相关方**：谁会受益，谁会受损？
+
+> 不给结论，只提供视角。判断权在你手中。
+
+### 2. 逻辑漏洞检测器
+
+自动识别常见逻辑谬误：
+
+- 诉诸权威
+- 稻草人谬误
+- 滑坡谬误
+- 非黑即白
+- 人身攻击
+- 循环论证
+- 从众心理
+- 诉诸情感
+
+> 提示"这里需要你思考"，不说对错。
+
+### 3. 思维成长档案（Coming Soon）
+
+- 记录曾经相信但现在质疑的观点
+- 追踪思维演变
+- 见证自己的成长
+
+## 📸 使用截图
+
+### 多视角分析示例
+
+```
+┌─────────────────────────────────────────────────────┐
+│  📖 多视角阅读器                                    │
+├─────────────────────────────────────────────────────┤
+│                                                     │
+│  支持角度 ✅                                         │
+│  • 从直觉上看，这个观点可能符合某些人的直接经验      │
+│  • 如果问题确实存在，提出观点的出发点是值得肯定的    │
+│  • 在某些条件下，这个观点的逻辑链条是可以成立的      │
+│                                                     │
+│  反对角度 ⚠️                                         │
+│  • 个人经验和感受不一定能代表整体情况                │
+│  • 这个观点是否经得起不同情境的检验？                │
+│  • 有没有相反的证据或案例？                          │
+│                                                     │
+│  盲点分析 👁️                                        │
+│  • 主要反映了哪类人群的视角？是否有代表性？          │
+│  • 时间维度上，这个观点是否有长期适用性？            │
+│  • 是否考虑了技术进步和社会变化带来的新变量？        │
+│                                                     │
+└─────────────────────────────────────────────────────┘
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 逻辑漏洞检测示例
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+┌─────────────────────────────────────────────────────┐
+│  🛡️ 逻辑漏洞检测                                    │
+├─────────────────────────────────────────────────────┤
+│                                                     │
+│  检测结果：论证较弱 ⚠️                               │
+│  ━━━━━━━━━━━━━━━━━━━━                               │
+│                                                     │
+│  检测到 3 个逻辑漏洞：                               │
+│                                                     │
+│  ┌─────────────────────────────────────────────┐   │
+│  │ 🔶 诉诸权威                                  │   │
+│  │                                             │   │
+│  │ 描述：用权威人士的言论代替逻辑论证          │   │
+│  │                                             │   │
+│  │ 原文位置：据某专家称...                     │   │
+│  │                                             │   │
+│  │ 💡 提示：这个权威在其领域是否可信？          │   │
+│  │        是否有其他专家持不同观点？            │   │
+│  └─────────────────────────────────────────────┘   │
+│                                                     │
+│  ┌─────────────────────────────────────────────┐   │
+│  │ 🔶 滑坡谬误                                  │   │
+│  │                                             │   │
+│  │ 描述：假设小的偏离会引发灾难性后果          │   │
+│  │                                             │   │
+│  │ 原文位置：如果不...就会...                  │   │
+│  │                                             │   │
+│  │ 💡 提示：每个环节的因果关系是否有充分依据？  │   │
+│  │        有没有中间立场？                      │   │
+│  └─────────────────────────────────────────────┘   │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ 技术栈
 
-## Learn More
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS
+- **Language**: TypeScript
+- **Icons**: Lucide React
+- **LLM**: 支持 DeepSeek API（可选，用户自带 API Key）
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 安装使用
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 方式一：直接使用（推荐）
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+访问在线版本：
+- 多视角阅读器：[https://critical-thinking-toolkit.vercel.app/perspective](https://critical-thinking-toolkit.vercel.app/perspective)
+- 逻辑漏洞检测：[https://critical-thinking-toolkit.vercel.app/logic](https://critical-thinking-toolkit.vercel.app/logic)
 
-## Deploy on Vercel
+### 方式二：本地运行
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# 克隆项目
+git clone https://github.com/yourusername/critical-thinking-toolkit.git
+cd critical-thinking-toolkit
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 打开 http://localhost:3000
+```
+
+### 方式三：部署到 Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/critical-thinking-toolkit)
+
+## 🔑 API Key 配置
+
+工具支持接入 LLM API 进行深度分析。你可以使用自己的 API Key：
+
+1. 点击页面右上角的「配置API」
+2. 输入你的 DeepSeek API Key
+3. Key 存储在浏览器本地，不会上传到任何服务器
+
+获取 API Key：[https://platform.deepseek.com](https://platform.deepseek.com)
+
+> 不配置 API Key 也能使用基础分析功能
+
+## 🎯 使用场景
+
+### 读文章时
+看到一篇让你热血沸腾或义愤填膺的文章？先别急着转发，用工具分析一下。
+
+### 做决策时
+面对两难选择？把选项和顾虑都写下来，让工具帮你发现可能的盲点。
+
+### 讨论前
+准备和人辩论？先分析自己的观点是否经得起推敲，做到"知己知彼"。
+
+## 💡 为什么批判性思维重要？
+
+> 在 AI 时代，最稀缺的能力不是知识，而是判断力。
+
+- **信息过载**：每天产生的信息量超过个人处理能力
+- **算法茧房**：推荐算法让你只看到想看的
+- **虚假信息**：假新闻和深度伪造无处不在
+- **认知偏见**：每个人都受限于自己的经验
+
+批判性思维帮你：
+1. 不被情绪裹挟
+2. 不被权威绑架
+3. 不被算法困住
+4. 做出真正属于自己的判断
+
+## 🤝 这个项目源于...
+
+我对批判性思维的长期思考。
+
+如果你也觉得这个工具有价值，可能也会对我写的书感兴趣：
+
+👉 **[vigma.app](https://vigma.app)**
+
+这里有更多关于思维方法、认知升级、人性洞察的内容。
+
+## 📄 License
+
+MIT License - 欢迎 fork、star、和贡献代码！
+
+## 🙏 致谢
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/)
+- [DeepSeek](https://deepseek.com/)
+
+---
+
+**记住：批判性思维不是怀疑一切，而是更聪明地相信。**
